@@ -1,0 +1,3 @@
+To install, you must have GNU Autotools installed.
+Type "sh autogen.sh" to build the configure script,
+then "./configure" then "make" then "sudo make install"

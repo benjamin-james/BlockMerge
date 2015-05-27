@@ -14,7 +14,7 @@ AC_PROG_INSTALL
 AC_PROG_MAKE_SET
 
 # Checks for libraries.
-AC_CHECK_HEADERS([stdbool.h])
+AC_CHECK_HEADERS([stdbool.h stdlib.h])
 
 # Checks for header files.
 
