@@ -2,17 +2,19 @@
 #define GRID_H
 
 #include "block.h"
+#include "string.h" /* size_t */
 
-struct tile {
-	int x, y;
-	struct block *b; /* enclosing block */
-};
 struct grid {
 	int w, h;
-	struct tile *array;
+	struct block **tiles; /* 2d array of pointers */
+	struct block *empty_block; /* the empty block */
+	struct block *blocks; /* list of all allocated blocks */
+	size_t alloc, size;
 };
 
-void grid_init(struct grid *g);
-void grid_resize(struct grid *g, int w, int h);
+int grid_tile_index(struct grid *g, int x, int y);
+
+void grid_init(struct grid *g, int w, int h);
+void grid_destroy(struct grid *g);
 
 #endif
