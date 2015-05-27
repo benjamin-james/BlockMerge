@@ -3,9 +3,9 @@
 
 #include "stdbool.h"
 
-struct block {
+typedef struct block {
 	int x, y, w, h;
-};
+} *bptr;
 
 bool block_cmp(struct block *a, struct block *b);
 
